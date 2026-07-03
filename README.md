@@ -8,7 +8,7 @@ TableFlow is a full-stack MERN application designed to manage restaurant table r
 ### Test Credentials
 To test the live demo, you can use the following seeded accounts:
 - **Admin Account:** `admin@tableflow.com` / `admin123`
-- **Customer Account:** `customer1@tableflow.com` / `customer123`
+- **Customer Account:** `customer1@tableflow.com` / `customer123` ,  `customer2@tableflow.com` / `customer123
 
 ## Setup Instructions
 
