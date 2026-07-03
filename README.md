@@ -2,7 +2,8 @@
 
 TableFlow is a full-stack MERN application designed to manage restaurant table reservations efficiently, providing both customer-facing functionality and administrative controls.
 
-**Live Demo:** [Insert Vercel/Render URL Here]
+**Live Demo:** [https://fission-infotech-1.onrender.com](https://fission-infotech-1.onrender.com)
+**Backend API:** [https://fission-infotech-hm4d.onrender.com](https://fission-infotech-hm4d.onrender.com)
 
 ## Setup Instructions
 
