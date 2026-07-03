@@ -5,6 +5,11 @@ TableFlow is a full-stack MERN application designed to manage restaurant table r
 **Live Demo:** [https://fission-infotech-1.onrender.com](https://fission-infotech-1.onrender.com)
 **Backend API:** [https://fission-infotech-hm4d.onrender.com](https://fission-infotech-hm4d.onrender.com)
 
+### Test Credentials
+To test the live demo, you can use the following seeded accounts:
+- **Admin Account:** `admin@tableflow.com` / `admin123`
+- **Customer Account:** `customer1@tableflow.com` / `customer123`
+
 ## Setup Instructions
 
 ### Prerequisites
