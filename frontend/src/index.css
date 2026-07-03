@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e86925;
+  --color-success: #16A34A;
+  --color-danger: #DC2626;
+  --color-warning: #D97706;
+  --color-background: #F8FAFC;
+  --color-card: #FFFFFF;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: #58595c;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    z-index: 0;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/doodle-bg.png');
+    background-size: 300px;
+    background-repeat: repeat;
+    opacity: 0.08;
+    z-index: -1;
+    pointer-events: none;
+    /* text-gray-900 */
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white font-medium rounded-lg hover:opacity-90 transition-opacity shadow-sm;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 bg-danger text-white font-medium rounded-lg hover:bg-red-700 transition-colors shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 text-gray-800 font-medium rounded-lg hover:bg-gray-300 transition-colors shadow-sm;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+  }
+
+  .card-container {
+    @apply bg-card rounded-xl shadow-sm border border-gray-100 p-6;
+  }
+}
