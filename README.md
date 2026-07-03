@@ -73,6 +73,12 @@ The system utilizes JWT (JSON Web Tokens) with encoded role information (`custom
 - **No Real-Time Sockets:** If two customers are viewing the exact same available table on their screens, and one books it, the other customer's screen won't update until they refresh or attempt to book (at which point the API will correctly reject the second attempt).
 - **Time Zones:** The system currently relies on the browser/server's local time zone, which assumes the restaurant and the customers are in the same time zone.
 
+## Data Modeling & Design Decisions
+The MongoDB schema is designed relationally using `ObjectId` references to ensure data integrity:
+- **User Schema:** Stores authentication data and uses a `role` enum (`customer`, `admin`) to handle permissions at the database level.
+- **Table Schema:** Represents physical restaurant tables. Contains `tableNumber` and `capacity`. By keeping this separate, the restaurant floor plan can be dynamically reconfigured without hardcoding capacities into the frontend.
+- **Reservation Schema:** The core transaction document. It links the `customer` (User ObjectId) and the `table` (Table ObjectId). It explicitly tracks `reservationDate`, `timeSlot`, and `numberOfGuests`. It also includes an `isDeleted` flag for soft-deleting records to preserve audit history.
+
 ## API Documentation
 The backend provides a fully RESTful API. Below are the key endpoints:
 
